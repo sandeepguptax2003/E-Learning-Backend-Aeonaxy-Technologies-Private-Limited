@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "c81561d8-026d-480d-9cce-932bfa52936f",
+		"name": "E-Learning-Backend-Aeonaxy-Technologies-Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25446062"
+	},
+	"item": [
+		{
+			"name": "Home Page",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": ["Welcome to the E-Learning Backend"]
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sandeep\",\r\n    \"email\":\"sandeephunter2002@gmail.com\",\r\n    \"password\":\"sandeep\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/register",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [{
+				"message": "User registered successfully"
+			}]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sandeephunter2002@gmail.com\",\r\n    \"password\":\"sandeep\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/login",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [{
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjU1NzQsImV4cCI6MTcxMjMyOTE3NH0.Xvc6wmmkEScf9zgCh2ZP68zXeBBYnvbmEEhEg0pKIe0"
+			}]
+		},
+		{
+			"name": "User View Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjAwNzAsImV4cCI6MTcxMjMyMzY3MH0.kV99Ta8QKHkXf1ikCTFY9p35tPN-rKtKxc5PToWo0mY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": [{
+				"_id": "660fee21304c9523a734dc7e",
+				"name": "sandeep",
+				"email": "sandeephunter2002@gmail.com",
+				"createdAt": "2024-04-05T12:27:13.605Z",
+				"updatedAt": "2024-04-05T12:27:13.605Z",
+				"__v": 0
+			}]
+		},
+		{
+			"name": "User Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sandeephunter2002@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/forgot-password",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"forgot-password"
+					]
+				}
+			},
+			"response": [{
+				"message": "Password reset email sent"
+			}]
+		},
+		{
+			"name": "User Profile Edit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjAwNzAsImV4cCI6MTcxMjMyMzY3MH0.kV99Ta8QKHkXf1ikCTFY9p35tPN-rKtKxc5PToWo0mY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sandeep updated\",\r\n    \"email\":\"sandeephunter2002@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": [{
+				"_id": "660fee21304c9523a734dc7e",
+				"name": "sandeep updated",
+				"email": "sandeephunter2002@gmail.com",
+				"createdAt": "2024-04-05T12:27:13.605Z",
+				"updatedAt": "2024-04-05T12:29:48.193Z",
+				"__v": 0
+			}]
+		},
+		{
+			"name": "User View All Courses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjU1NzQsImV4cCI6MTcxMjMyOTE3NH0.Xvc6wmmkEScf9zgCh2ZP68zXeBBYnvbmEEhEg0pKIe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/courses",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"courses"
+					]
+				}
+			},
+			"response": [[
+				{
+					"_id": "661003b4232eaaf1205c05ae",
+					"title": "DSA Mastery Course",
+					"description": "New Course Description",
+					"category": "DSA",
+					"createdAt": "2024-04-05T13:59:16.370Z",
+					"updatedAt": "2024-04-05T13:59:16.370Z",
+					"__v": 0
+				}
+			]]
+		},
+		{
+			"name": "User View Course By Filter-Category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjU1NzQsImV4cCI6MTcxMjMyOTE3NH0.Xvc6wmmkEScf9zgCh2ZP68zXeBBYnvbmEEhEg0pKIe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/courses?category=DSA",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "DSA"
+						}
+					]
+				}
+			},
+			"response": [[
+				{
+					"_id": "661003b4232eaaf1205c05ae",
+					"title": "DSA Mastery Course",
+					"description": "New Course Description",
+					"category": "DSA",
+					"createdAt": "2024-04-05T13:59:16.370Z",
+					"updatedAt": "2024-04-05T13:59:16.370Z",
+					"__v": 0
+				}
+			]]
+		},
+		{
+			"name": "User View Course By Pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjU1NzQsImV4cCI6MTcxMjMyOTE3NH0.Xvc6wmmkEScf9zgCh2ZP68zXeBBYnvbmEEhEg0pKIe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/courses?page=1&limit=10",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [[
+				{
+					"_id": "661003b4232eaaf1205c05ae",
+					"title": "DSA Mastery Course",
+					"description": "New Course Description",
+					"category": "DSA",
+					"createdAt": "2024-04-05T13:59:16.370Z",
+					"updatedAt": "2024-04-05T13:59:16.370Z",
+					"__v": 0
+				}
+			]]
+		},
+		{
+			"name": "User Enroll Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjU1NzQsImV4cCI6MTcxMjMyOTE3NH0.Xvc6wmmkEScf9zgCh2ZP68zXeBBYnvbmEEhEg0pKIe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/courses/661003b4232eaaf1205c05ae/enroll",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"courses",
+						"661003b4232eaaf1205c05ae",
+						"enroll"
+					]
+				}
+			},
+			"response": [{
+				"message": "Thank you for enrolling in DSA Mastery Course! 🎉 Hope you do well"
+			}]
+		},
+		{
+			"name": "User View Enrolled Course",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBmZWUyMTMwNGM5NTIzYTczNGRjN2UiLCJpYXQiOjE3MTIzMjU1NzQsImV4cCI6MTcxMjMyOTE3NH0.Xvc6wmmkEScf9zgCh2ZP68zXeBBYnvbmEEhEg0pKIe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/users/courses/enrolled",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users",
+						"courses",
+						"enrolled"
+					]
+				}
+			},
+			"response": [[
+				{
+					"_id": "661003b4232eaaf1205c05ae",
+					"title": "DSA Mastery Course",
+					"description": "New Course Description",
+					"category": "DSA",
+					"createdAt": "2024-04-05T13:59:16.370Z",
+					"updatedAt": "2024-04-05T13:59:16.370Z",
+					"__v": 0
+				}
+			]]
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/admin/login",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": [{
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIzMjUzOTAsImV4cCI6MTcxMjMyODk5MH0.OI9cmEy7Id1ZkZn44qBw8m8GDXhERiq1oO-OHvw91fE"
+			}]
+		},
+		{
+			"name": "Admin Create Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIzMjUzOTAsImV4cCI6MTcxMjMyODk5MH0.OI9cmEy7Id1ZkZn44qBw8m8GDXhERiq1oO-OHvw91fE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"DSA Mastery Course\",\r\n  \"description\": \"New Course Description\",\r\n  \"category\": \"DSA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/admin/courses",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"admin",
+						"courses"
+					]
+				}
+			},
+			"response": [{
+				"message": "Course created successfully",
+				"course": {
+					"title": "DSA Mastery Course",
+					"description": "New Course Description",
+					"category": "DSA",
+					"_id": "661003b4232eaaf1205c05ae",
+					"createdAt": "2024-04-05T13:59:16.370Z",
+					"updatedAt": "2024-04-05T13:59:16.370Z",
+					"__v": 0
+				}
+			}]
+		},
+		{
+			"name": "Admin View All Created Course",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIzMjUzOTAsImV4cCI6MTcxMjMyODk5MH0.OI9cmEy7Id1ZkZn44qBw8m8GDXhERiq1oO-OHvw91fE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/admin/courses",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"admin",
+						"courses"
+					]
+				}
+			},
+			"response": [[
+				{
+					"_id": "6610033c232eaaf1205c05a6",
+					"title": "DSA Mastery Course",
+					"description": "New Course Description",
+					"category": "DSA",
+					"createdAt": "2024-04-05T13:57:16.851Z",
+					"updatedAt": "2024-04-05T13:57:16.851Z",
+					"__v": 0
+				}
+			]]
+		},
+		{
+			"name": "Admin Edit Course",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIzMjUzOTAsImV4cCI6MTcxMjMyODk5MH0.OI9cmEy7Id1ZkZn44qBw8m8GDXhERiq1oO-OHvw91fE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \" Pro DSA Master Course\",\r\n  \"description\": \"New Course Description\",\r\n  \"category\": \"DSA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/admin/courses/6610033c232eaaf1205c05a6",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"admin",
+						"courses",
+						"6610033c232eaaf1205c05a6"
+					]
+				}
+			},
+			"response": [{
+				"message": "Course updated successfully",
+				"course": {
+					"_id": "6610033c232eaaf1205c05a6",
+					"title": " Pro DSA Master Course",
+					"description": "New Course Description",
+					"category": "DSA",
+					"createdAt": "2024-04-05T13:57:16.851Z",
+					"updatedAt": "2024-04-05T13:58:25.023Z",
+					"__v": 0
+				}
+			}]
+		},
+		{
+			"name": "Admin Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIzMjUzOTAsImV4cCI6MTcxMjMyODk5MH0.OI9cmEy7Id1ZkZn44qBw8m8GDXhERiq1oO-OHvw91fE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fine-blue-walrus-cape.cyclic.app/api/admin/courses/6610033c232eaaf1205c05a6",
+					"protocol": "https",
+					"host": [
+						"fine-blue-walrus-cape",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"admin",
+						"courses",
+						"6610033c232eaaf1205c05a6"
+					]
+				}
+			},
+			"response": [{
+				"message": "Course deleted successfully"
+			}]
+		}
+	]
+}
