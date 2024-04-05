@@ -4,7 +4,7 @@ const Enrollment = require('../models/Enrollment');
 const bcrypt = require('bcrypt');
 const { Resend } = require('resend');
 const jwt = require('jsonwebtoken');
-const crypto = require('crypto');
+const crypto = require('crypto')
 
 // Register User
 exports.registerUser = async (req, res) => {
