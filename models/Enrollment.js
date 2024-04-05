@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const enrollmentSchema = new mongoose.Schema({
   user: {
