@@ -1,7 +1,7 @@
 const Admin = require('../models/Admin');
 const Course = require('../models/Course');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 // Admin login
 exports.loginAdmin = async (req, res) => {
