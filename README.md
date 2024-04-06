@@ -85,7 +85,7 @@ This section provides an overview of the API endpoints available for testing. Ea
 
 These endpoints are part of the backend API for the e-learning platform and can be tested using tools like Postman, cURL, ThunderClient Etc. For detailed API Uses Refer to Models And Routes.
 ##
-## Backend API Link
+## Backend Deployed Link
 
 The backend is deployed in Cyclic and can be accessed at [https://fine-blue-walrus-cape.cyclic.app/](https://fine-blue-walrus-cape.cyclic.app/).
 
