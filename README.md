@@ -87,7 +87,7 @@ These endpoints are part of the backend API for the e-learning platform and can 
 ##
 ## Backend Deployed Link
 
-The backend is deployed in Cyclic and can be accessed at [https://fine-blue-walrus-cape.cyclic.app/](https://fine-blue-walrus-cape.cyclic.app/).
+The backend is deployed in Render and can be accessed at [https://e-learning-platform-t6jf.onrender.com/](https://e-learning-platform-t6jf.onrender.com/).
 
 ## Installation
 
